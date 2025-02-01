@@ -1,0 +1,10 @@
+# Ignore system files
+.DS_Store
+__pycache__/
+
+# Ignore raw GIS data
+*.shp
+*.dbf
+*.prj
+*.shx
+data/raw/

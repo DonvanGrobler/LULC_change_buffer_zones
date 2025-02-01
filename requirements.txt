@@ -1,0 +1,9 @@
+earthengine-api
+geemap
+plotly
+matplotlib
+tqdm
+ipywidgets
+seaborn
+pandas
+numpy
