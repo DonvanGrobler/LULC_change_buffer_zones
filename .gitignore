@@ -4,7 +4,7 @@ __pycache__/
 
 # Ignore raw GIS data
 #*.shp
-/*.dbf
+*.dbf
 *.prj
 *.shx
 *.cpg
