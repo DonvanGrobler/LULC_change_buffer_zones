@@ -92,16 +92,16 @@ The notebook is devided into 3 main sections:
 ## 🗺️ **Example Outputs**
 1️⃣ **LULC Trends Over Time**  
 *Line graph comparing changes in different land cover classes in a park’s buffer zone.*  
-![Line graph example](assets/images/image.png)
+![Line graph example](assets/images/image.png)  
 2️⃣ **Sankey Diagram for LULC Transitions**  
 *Illustrates the flow of land cover transitions between years.*  
-![Sankey diagram example](assets/images/image-1.png)
+![Sankey diagram example](assets/images/image-1.png)  
 3️⃣ **Heatmaps of Transition Intensity**  
 *Visualizes which land cover categories gained or lost area in each significant interval.*  
-![Heatmap example](assets/images/image-2.png)
+![Heatmap example](assets/images/image-2.png)  
 4️⃣ **Filtered Transition Maps**  
 *Displays areas where specific LULC transitions occurred using Google Earth Engine.*  
-![Transition map example](assets/images/image-3.png) 
+![Transition map example](assets/images/image-3.png)  
 
 ---
 
