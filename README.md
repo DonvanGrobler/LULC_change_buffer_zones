@@ -8,9 +8,9 @@ The tool is developed as part of a **Master’s thesis** and aims to **facilitat
 
 ### **Key Objectives**  
 - Characterizing **primary LULC trends** in buffer zones.  
-- Performing **spatio-temporal analyses** of LULC change.  
-- Using **intensity analysis** to quantify LULC changes over time.  
-- Visualizing LULC transitions using **Sankey diagrams** and **heatmaps**.  
+- Performing **spatio-temporal analyses** of LULC change in these zones.  
+- Using **intensity analysis**, as proposed by Aldwaik and Pontius (2012), to quantify LULC changes over time.  
+- Employing visual aids, such as **Sankey diagrams** and **heatmaps**, to represent these LULC transitions.  
 - Encouraging adoption of this tool by **Parks and Conservation Authorities**.  
 
 ---
@@ -30,12 +30,12 @@ This project provides a **replicable workflow** to assess LULC changes and their
 ## 📂 **Repository Structure**  
 ```
 LULC_change_buffer_zones/  
-│── data/                 # LULC datasets for different parks  
-│── notebooks/            # Jupyter Notebooks for analysis  
-│── src/                  # Python scripts for analysis and visualization  
-│── results/              # Output plots, maps, and tables  
+│── data/                 # Park and buffer zone boundaries & LULC datasets (2016-2023)  
+│── notebooks/            # Jupyter Notebook(s) used for analysis  
+│── scripts/              # Python scripts for modules
 │── .gitignore            # Files to exclude from Git  
-│── LICENSE               # License information  
+│── config.json           # Setting the base path and parameters  
+│── LICENSE               # License information 
 │── README.md             # Project documentation  
 │── requirements.txt      # Dependencies  
 ```
@@ -59,22 +59,29 @@ Ensure you have:
 - Google Earth Engine (GEE) API
 - geemap
 - pandas, numpy, matplotlib, seaborn, plotly
-### **3️⃣ Authenticate Google Earth Engine (GEE)***
+### **3️⃣ Run the Jupyter Notebook***
 ```
-import ee  
-ee.Authenticate()  
-ee.Initialize()
+jupyter notebook notebooks/Dynamic_World_LULC_change.ipynb
 ```
-### **4️⃣ Run the Jupyter Notebook**
-```
-jupyter notebook notebooks/LULC_analysis.ipynb
-```
+### **4️⃣ Inside the Notebook**
+The notebook is devided into 3 main sections:
+- Setup 🔢  
+  - *This should always be executed as it sets the parameters used in the rest of the script*
+- 1️⃣ Data Collection 📊  
+  - *This is only needed if other years than 2016-2023 or other AoI than the SANParks and their buffer zones are of interest*
+  - *This step has already been done and the data included in the repo for your convinience for the above stated time and place*
+- 2️⃣ Data Visualization 🎨
+  - *These are the first look at the LULC in the AoI with some nice visuaisations*
+- 3️⃣ LULC change intensity analysis 🔍
+  - *Based on the method developed by Aldwaik and Pontius (2012) the LULC change instensity is measured and visualised*
+- 4️⃣ LULC change hotspot mapping 🗺️
+  - *Visualise the change hotspots on a map based on the LULC change intensity analysis*
 
 ---
 
 ## 📊 **Features**
 ✔ Dynamically loads LULC datasets for selected parks  
-✔ Visualizes changes through line graphs, Sankey diagrams, and heatmaps  
+✔ Visualizes changes through line graphs, Sankey diagrams, and heatmaps etc.  
 ✔ Computes intensity metrics (Time, Category, Transition Intensity)  
 ✔ Interactive selection widgets for filtering specific transitions  
 ✔ Geospatial mapping of filtered LULCC transitions  
@@ -84,27 +91,21 @@ jupyter notebook notebooks/LULC_analysis.ipynb
 ## 🗺️ **Example Outputs**
 1️⃣ **LULC Trends Over Time**  
 *Line graph comparing changes in different land cover classes in a park’s buffer zone.*
-
+![Line graph example](assets/images/image.png)
 2️⃣ **Sankey Diagram for LULC Transitions**  
 *Illustrates the flow of land cover transitions between years.*
-
+![Sankey diagram example](assets/images/image-1.png)
 3️⃣ **Heatmaps of Transition Intensity**  
 *Visualizes which land cover categories gained or lost area in each significant interval.*
-
+![Heatmap example](assets/images/image-2.png)
 4️⃣ **Filtered Transition Maps**  
 *Displays areas where specific LULC transitions occurred using Google Earth Engine.*
-
----
-
-## 📈 **Future Improvements**
-🔹 Expand datasets to include additional years and AoIs.  
-🔹 Enhance automation via GitHub Actions for data updates.  
-🔹 Improve UI/UX for interactive analysis.  
+![Transition map example](assets/images/image-3.png) 
 
 ---
 
 ## 📜 **License**
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License.
 
 ---
 
@@ -118,12 +119,10 @@ Potential Collaborators Welcome!
 ## 💬 **Feedback & Collaboration**
 If you are interested in collaborating, improving, or applying this tool, feel free to: 📧 Email: donvangrobler@gmail.com  
 
-
 ---
 
 ## 📚 **Data Sources & Libraries**
 This project relies on several open datasets and libraries for analysis:
-
 - 🌍 **Dynamic World LULC Dataset (Google Earth Engine)**  
 *Paper: Brown et al. (2022). Dynamic World, near real-time global 10 m land use land cover mapping*
 - 🛰 **Google Earth Engine (GEE)**  

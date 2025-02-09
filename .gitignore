@@ -7,4 +7,8 @@ __pycache__/
 *.dbf
 *.prj
 *.shx
+*.cpg
+*.qmd
 data/raw/
+assets/images/*
+scripts/__init__.py
