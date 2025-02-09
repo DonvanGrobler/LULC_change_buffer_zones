@@ -4,11 +4,11 @@ __pycache__/
 
 # Ignore raw GIS data
 #*.shp
-*.dbf
+/*.dbf
 *.prj
 *.shx
 *.cpg
 *.qmd
 data/raw/
-assets/images/*
+#assets/images/*
 scripts/__init__.py

@@ -30,6 +30,7 @@ This project provides a **replicable workflow** to assess LULC changes and their
 ## 📂 **Repository Structure**  
 ```
 LULC_change_buffer_zones/  
+│── assets/               # Images used in README
 │── data/                 # Park and buffer zone boundaries & LULC datasets (2016-2023)  
 │── notebooks/            # Jupyter Notebook(s) used for analysis  
 │── scripts/              # Python scripts for modules
@@ -65,16 +66,16 @@ jupyter notebook notebooks/Dynamic_World_LULC_change.ipynb
 ```
 ### **4️⃣ Inside the Notebook**
 The notebook is devided into 3 main sections:
-- Setup 🔢  
+- 0️⃣ **Setup** 🔢  
   - *This should always be executed as it sets the parameters used in the rest of the script*
-- 1️⃣ Data Collection 📊  
+- 1️⃣ **Data Collection** 📊  
   - *This is only needed if other years than 2016-2023 or other AoI than the SANParks and their buffer zones are of interest*
   - *This step has already been done and the data included in the repo for your convinience for the above stated time and place*
-- 2️⃣ Data Visualization 🎨
+- 2️⃣ **Data Visualization** 🎨
   - *These are the first look at the LULC in the AoI with some nice visuaisations*
-- 3️⃣ LULC change intensity analysis 🔍
+- 3️⃣ **LULC change intensity analysis** 🔍
   - *Based on the method developed by Aldwaik and Pontius (2012) the LULC change instensity is measured and visualised*
-- 4️⃣ LULC change hotspot mapping 🗺️
+- 4️⃣ **LULC change hotspot mapping** 🗺️
   - *Visualise the change hotspots on a map based on the LULC change intensity analysis*
 
 ---
@@ -90,16 +91,16 @@ The notebook is devided into 3 main sections:
 
 ## 🗺️ **Example Outputs**
 1️⃣ **LULC Trends Over Time**  
-*Line graph comparing changes in different land cover classes in a park’s buffer zone.*
+*Line graph comparing changes in different land cover classes in a park’s buffer zone.*  
 ![Line graph example](assets/images/image.png)
 2️⃣ **Sankey Diagram for LULC Transitions**  
-*Illustrates the flow of land cover transitions between years.*
+*Illustrates the flow of land cover transitions between years.*  
 ![Sankey diagram example](assets/images/image-1.png)
 3️⃣ **Heatmaps of Transition Intensity**  
-*Visualizes which land cover categories gained or lost area in each significant interval.*
+*Visualizes which land cover categories gained or lost area in each significant interval.*  
 ![Heatmap example](assets/images/image-2.png)
 4️⃣ **Filtered Transition Maps**  
-*Displays areas where specific LULC transitions occurred using Google Earth Engine.*
+*Displays areas where specific LULC transitions occurred using Google Earth Engine.*  
 ![Transition map example](assets/images/image-3.png) 
 
 ---
